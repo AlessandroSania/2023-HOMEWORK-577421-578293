@@ -4,7 +4,7 @@ import it.uniroma3.DiaDia.Attrezzi.Attrezzo;
 /**
  * Questa classe modella un serie di stanze nella partita 
  *
- * @author  577421
+ * @author 
  * @see Stanza
  * @version base
  */
