@@ -1,4 +1,5 @@
 package it.uniroma3.DiaDia;
+
 import it.uniroma3.DiaDia.Giocatore.Giocatore;
 import it.uniroma3.DiaDia.ambienti.Labirinto;
 import it.uniroma3.DiaDia.ambienti.Stanza;
@@ -16,10 +17,9 @@ public class Partita {
 	private Giocatore giocatore;
 	private boolean finita;
 	
-	public Partita(){
-		labirinto = new Labirinto();
+	public Partita(Labirinto labirinto){
+		this.labirinto = labirinto;
 		giocatore = new Giocatore();
-		labirinto.creaStanze();
 		this.finita = false;
 	}
 	

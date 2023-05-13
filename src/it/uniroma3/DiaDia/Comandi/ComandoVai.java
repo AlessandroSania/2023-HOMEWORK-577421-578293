@@ -16,7 +16,7 @@ public class ComandoVai implements Comando {
 	 */
 	@Override
 	public void esegui(Partita partita) {
-		Stanza stanzaCorrente = partita.getLabirinto().getStanzaCorrente();
+		Stanza stanzaCorrente = partita.getStanzaCorrente();
 		Stanza prossimaStanza = null;
 		if (this.direzione == null) {
 			this.io.mostraMessaggio("Dove vuoi andare? Devi specificare una direzione");
@@ -28,8 +28,8 @@ public class ComandoVai implements Comando {
 			return;
 		}
 
-		partita.getLabirinto().setStanzaCorrente(prossimaStanza);
-		this.io.mostraMessaggio(partita.getLabirinto().getStanzaCorrente().getNome());
+		partita.setStanzaCorrente(prossimaStanza);
+		this.io.mostraMessaggio(partita.getStanzaCorrente().getNome());
 		Giocatore giocatore = partita.getGiocatore();
 		giocatore.setCfu(giocatore.getCfu() - 1);
 	}
